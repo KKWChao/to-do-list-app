@@ -14,6 +14,15 @@
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* HEADER STYLE START */
 
 header {
@@ -152,13 +161,13 @@ section li {
   list-style: none;
   padding: 15px;
   height: calc(100% - 50px);
-  background: rgb(196, 196, 196);
+  background: var(--secondary-color);
   border-radius: 12px;
   border: 2px solid var(--primary-color);
 }
 
 .task-item {
-  color: var(--grey);
+  color: var(--primary-color);
   padding: 15px 15px;
   border: 2px solid var(--primary-color);
   background: var(--tertiary-color);
@@ -175,6 +184,12 @@ section li {
   color: var(--secondary-color);
   font-size: 1.55rem;
 }
+
+.task-list-wrapper {
+  flex: 1;
+  margin: 0 20px 20px;
+}
+
 .task-actions {
   display: flex;
   flex-wrap: wrap;
@@ -210,6 +225,26 @@ form .form-group {
   margin: 10px 6px 10px 0;
   flex: 1;
 }
+
+/* PAGE STYLE START */
+
+.page-title {
+  color: var(--primary);
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-size: 4.5rem;
+}
+
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px auto;
+  width: 95%;
+}
+
+
 
 /* SELECT STYLE START */
 
@@ -263,4 +298,32 @@ form .form-group {
 .select-status option {
   font-weight: normal;
   font-size: 2rem;
+}
+
+/* FOOTER STYLE START */
+footer {
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  bottom: 0;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 980px) {
+  form .form-group {
+    flex: 1 100%;
+  }
+
+  form .form-group button {
+    width: 100%;
+  }
+
+  .task-list-wrapper {
+    flex-basis: 100%;
+  }
+
 }
