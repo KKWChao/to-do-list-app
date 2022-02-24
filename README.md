@@ -1,17 +1,19 @@
 # To-Do-List Application
 
-### Purpose
+## Purpose
 - create basic to do list
 
-### Created With
+## Created With
 * HTML
 * CSS
 * Javascript
 
-### Tasks
+### Credit
+* UCB Bootcamp
 
+### Tasks
 #### HTML
-[_] Basic Framework <br />
+[X] Basic Framework <br />
 
 #### CSS
 [_] Basic Framework <br />
