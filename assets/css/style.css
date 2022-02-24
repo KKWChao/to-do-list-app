@@ -119,7 +119,7 @@ section p {
 
 section p,
 section li {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 /* BUTTON START */
@@ -135,6 +135,7 @@ section li {
   position: relative;
   top: -3px;
   box-shadow: 0 3px var(--back-color);
+  margin: 0 0.25em;
 }
 
 .btn:hover {
@@ -146,15 +147,76 @@ section li {
   top: 0;
 }
 
-/* TASK LIST START */
-.task-list-wrapper {
-  flex: 1;
-  margin: 0 20px 20px;
+
+/* CHILD BUTTONS STYLE START */
+.edit-btn,
+.delete-btn {
+  font-size: 1.4rem;
+  padding: 5px 7px;
+  margin: 3px;
+  background: var(--primary-color);
+  color: #fff;
 }
+
+/* CHILD SELECT STYLE START */
+
+.select-dropdown,
+.select-status {
+  display: block;
+  font-size: 2.2rem;
+  color: #444;
+  padding: 12px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 12px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+  appearance: none;
+}
+
+.select-status {
+  font-size: 1.4rem;
+  padding: 4px 28px 4px 4px;
+  width: auto;
+}
+
+.select-dropdown::-ms-expand,
+.select-status::-ms-expand {
+  display: none;
+}
+
+.select-dropdown:hover,
+.select-status:hover {
+  border-color: #888;
+}
+
+.select-dropdown:focus,
+.select-status:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+.select-dropdown option,
+.select-status option {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+/* TASK LIST START */
 
 .list-title {
   color: var(--back-color);
-  font-size: 2.6rem;
+  font-size: 1.6rem;
 }
 
 .task-list {
@@ -167,7 +229,6 @@ section li {
 }
 
 .task-item {
-  color: var(--primary-color);
   padding: 15px 15px;
   border: 2px solid var(--primary-color);
   background: var(--tertiary-color);
@@ -243,75 +304,24 @@ form .form-group {
   margin: 25px auto;
   width: 95%;
 }
+  
 
-
-
-/* SELECT STYLE START */
-
-.select-dropdown,
-.select-status {
-  display: block;
-  font-size: 2.2rem;
-  color: #444;
-  padding: 12px;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  border: 2px solid var(--grey);
-  border-radius: 12px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fff;
-  background-image: url("../images/select-arrow.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.65em auto, 100%;
-  appearance: none;
-}
-
-.select-status {
-  font-size: 1.4rem;
-  padding: 4px 28px 4px 4px;
-  width: auto;
-}
-
-.select-dropdown::-ms-expand,
-.select-status::-ms-expand {
-  display: none;
-}
-
-.select-dropdown:hover,
-.select-status:hover {
-  border-color: #888;
-}
-
-.select-dropdown:focus,
-.select-status:focus {
-  border-color: #aaa;
-  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-  box-shadow: 0 0 0 3px -moz-mac-focusring;
-  color: #222;
-  outline: none;
-}
-.select-dropdown option,
-.select-status option {
-  font-weight: normal;
-  font-size: 2rem;
-}
 
 /* FOOTER STYLE START */
 footer {
   height: 50px;
   width: 100%;
-  background-image: linear-gradient(var(--primary-color), var(--secondary-color));
+  /* background-image: linear-gradient(var(--text-color), var(--primary-color)); */
+  background-color: var(--primary-color);
   color: var(--text-color);
+  opacity: 0.8;
   bottom: 0;
   padding: 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 
 @media screen and (max-width: 980px) {
   form .form-group {
